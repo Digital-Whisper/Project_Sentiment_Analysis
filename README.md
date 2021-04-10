@@ -1,6 +1,6 @@
 # Sentiment Analysis 
-
-Beautiful Soup 
-Nltk 
+Libraries Used
+BeautifulSoup 
+Nltk.vader
 Pandas
 
