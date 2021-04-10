@@ -48,13 +48,7 @@ vader=SentimentIntensityAnalyzer()
 
 f =lambda title: vader.polarity_scores(title)['compound']
 df['compound']=df['title'].apply(f)
-#print(vader.polarity_scores("fuck , cuntlike crazy now "))
-#print(df['title'])
-#f =lambda title: vader.polarity_scores(title)['neg']
-#df['neg']=df['title'].apply(f)
 df['date'] = pd.to_datetime(df.date).dt.date
-#print(df.columns[3])
-#print(df['date'].head())
 
 #visualization
 plt.figure(figsize=(10,8))
@@ -65,8 +59,7 @@ mean_df = mean_df.xs('compound',axis= 'columns').transpose()
 #mean_df.plot(kind ='line')
 mean_df.plot(kind ='bar')
 plt.show()
-#print(mean_df)         
-#print( df[df.isnull()] )          
+       
 
 
     
